@@ -1,5 +1,4 @@
-## Installation of Elastic Product.
-
+## Installation of Elasticsearch on Ubuntu
 
 
 #### Download and install the public signing key:
@@ -24,7 +23,6 @@
 #### Configure Elasticsearch and Disable Security. V8 comes with security enabled
 ```
 sudo vim /etc/elasticsearch/elasticsearch.yml
-
 node.name:  node-1
 network.host: 0.0.0.0
 discovery.seed.hosts: ["127.0.0.1"]
@@ -33,13 +31,11 @@ cluster.initial_master_nodes: ["node-1"]
 ```
 
 #### Increase default timeout for Elasticsearch start operation. Running Elasticsearch can be slow on your laptop. 
-
 ```
 sudo vim /lib/systemd/system/elasticsearch.service
 TimeoutStartSec=600
 ```
 #### Open another session and give permissions to read elasticsearch logs
-
 ```
 sudo chmod 755 -R /var/log/elasticsearch/
 ```
