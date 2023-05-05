@@ -1,5 +1,5 @@
 
-## Importing the single JSON data into the Elastic search.
+## Importin JSON data into the Elastic search.
 
 
 We are going to import the movie "Interstellar" and information associte with it.   
@@ -87,7 +87,7 @@ osboxes@osboxes:~$ curl -XGET 127.0.0.1:9200/movies/_search?pretty
 osboxes@osboxes:~$
 ```
 
-##  To bulk load we can use the following command. Ther is a conflict error as the document was already uploaded to elastic.
+To bulk load we can use the following command. Ther is a conflict error as the document was already uploaded to elastic.
 
 ```
 curl -XPUT 127.0.0.1:9200/_bulk?pretty --data-binary @movies.json
