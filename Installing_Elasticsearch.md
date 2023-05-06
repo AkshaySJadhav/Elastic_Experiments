@@ -53,7 +53,7 @@ curl -XGET 127.0.0.1:9200
 
 #### Download mapping for index
 ```
-sudo wget http://media.sundog-soft.com/es8/shakes-mapping.json
+sudo wget https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/resources/shakes-mapping.json
 curl -H "Content-Type: application/json" -XPUT 127.0.0.1:9200/shakespeare --data-binary @shakes-mapping.json
 ```
 
