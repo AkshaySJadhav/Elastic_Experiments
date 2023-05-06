@@ -48,7 +48,7 @@ osboxes@osboxes:~$ curl -XPUT "127.0.0.1:9200/movies/_doc/109487?if_sql_no=6&id_
 "title" : "Interstellar Foo",
 "year" : 2014
 }'
-{"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"request [/movies/_doc/109487] contains unrecognized parameters: [id_primary_term] -> did you mean [if_primary_term]?, [if_sql_no] -> did you mean [if_seq_no]?"}],"type":"illegal_argument_exception","reason":"request [/movies/_doc/109487] contains unrecognized parameters: [id_primary_term] -> did you mean [if_primary_term]?, [if_sql_no] -> did you mean [if_seq_no]?"},"status":400}
+{"error":{"root_cause":[{"type":"version_conflict_engine_exception","reason":[109487] version_conflict, required seqNo [7], primay term [1]current document has seqNo [12] and primary term [1]."status": 409}
 ```
 
 OR, you can use the retry_on_conflict option which simply means how many times should the operation be retried when a conflict occurs.
