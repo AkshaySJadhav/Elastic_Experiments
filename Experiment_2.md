@@ -28,10 +28,7 @@ osboxes@osboxes:~$ {"acknowledged":true,"shards_acknowledged":true,"index":"seri
 Now 
 
 ```
-osboxes@osboxes:~$ wget http://media.sundog-soft.com/es8/series.json
---2023-05-06 03:49:02--  http://media.sundog-soft.com/es8/series.json
-Resolving media.sundog-soft.com (media.sundog-soft.com)... 54.231.231.65, 54.231.169.193, 52.217.172.57, ...
-Connecting to media.sundog-soft.com (media.sundog-soft.com)|54.231.231.65|:80... connected.
+osboxes@osboxes:~$ wget https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/resources/series.json
 HTTP request sent, awaiting response... 200 OK
 Length: 1979 (1.9K) [application/octet-stream]
 Saving to: ‘series.json’
