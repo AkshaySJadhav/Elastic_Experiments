@@ -52,7 +52,7 @@ mysql>
 ```
 
 
-### 4. Create a new configuration file for the Mysql.
+### 4. Create a new configuration file for Mysql source under /etc/logstash/conf.d/ directory.
 
 Please make sure that that jar is available in the location that has been mentioned in the configuration file.
 ```
