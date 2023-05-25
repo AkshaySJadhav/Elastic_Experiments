@@ -1,13 +1,13 @@
 ## Loading data to Elasticsearch from MYSQL via Logstash.
 
 
-#### 1. Install latest version of MySQL.
+### 1. Install latest version of MySQL.
 
 ```
 root@osboxes:~# apt-get install mysql-server
 ```
 
-#### 2. Download the sample data and JDBC driver.
+### 2. Download the sample data and JDBC driver.
 
 In order to connect to the mysql, we need to download the driver file from the mysql website. We are going to using the file mysql-connector-java-8.0.30.jar file. 
 
@@ -27,7 +27,7 @@ ml-100k.zip                              100%[==================================
 root@osboxes:~#
 ```
 
-#### 3. Create the database and import the data.
+### 3. Create the database and import the data.
 
 ```
 root@osboxes:~# sudo mysql --local-infile=1 -u root -p
@@ -52,7 +52,7 @@ mysql>
 ```
 
 
-#### 4. Create a new configuration file for the Mysql.
+### 4. Create a new configuration file for the Mysql.
 
 Please make sure that that jar is available in the location that has been mentioned in the configuration file.
 ```
@@ -77,7 +77,7 @@ output {
 root@osboxes:~#
 ```
 
-#### 5. Start the logstash with mysql configuration.
+### 5. Start the logstash with mysql configuration.
 
 You will start observing database verbose on the screens in sometime.
 ```
