@@ -54,7 +54,7 @@ mysql>
 
 ### 4. Create a new configuration file for Mysql source under /etc/logstash/conf.d/ directory.
 
-Please make sure that that jar is available in the location that has been mentioned in the configuration file.
+Please make sure that jar file is available in the location that has been mentioned in the configuration file.
 ```
 root@osboxes:~# cat /etc/logstash/conf.d/mysql.conf
 input {
@@ -79,7 +79,7 @@ root@osboxes:~#
 
 ### 5. Start the logstash with mysql configuration.
 
-You will start observing database verbose on the screens in sometime.
+You will start observing database verbose on the screens in sometime that confirms connectivity is working.
 ```
 root@osboxes:/usr/share/logstash/bin# ./logstash -f /etc/logstash/conf.d/mysql.conf
 Using bundled JDK: /usr/share/logstash/jdk
