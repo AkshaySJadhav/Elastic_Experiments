@@ -9,5 +9,5 @@
 ....[5.2][Load data from AWS S3 bucket with Logstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_S3_load.md) <br>
 ....[5.3][Load CSV data to Elasticsearch with Logstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_CSV_Load.md)<br>
 ....[5.4][Load data from Kafka Topic with Logsstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_load_Kafka.md) <br>
-[6]. [Installation Kibana](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Using_Kibana.md)
-[7]. []()
+[6]. [Installation Kibana](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Using_Kibana.md)<br>
+[7]. [Kibana Lens:](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Kibana_lenses.md)
