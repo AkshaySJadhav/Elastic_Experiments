@@ -1,9 +1,9 @@
-# Kibana Lense:- Metricbeat
+# Kibana Lens:- Metricbeat
 
 Kibana Lens is an intuitive UI that helps you create data visualization with ease! Cabana Lens accomplishes this with a single visualization app where you can drag and drop the parameters
 and change the visualization on the fly.
 
-Make sure to install the lense same version as elasticsearch.
+Make sure to install the lens same version as elasticsearch.
 
 ### 1. Installation: 
 ```
@@ -36,7 +36,7 @@ root@osboxes:/home/osboxes#
   Index: Metricview-*
 </per>
 
-<b>Step2:</b> Analytic >> Visualize Libaray >> New Viualization and select "Lense" and change aggergation to "Maximun" once we add the metric.
+<b>Step2:</b> Analytic >> Visualize Libaray >> New Viualization and select "Lens" and change aggergation to "Maximun" once we add the metric.
 
 You will see the empty screen, now you have to select the metric from the left side to generate the graph.
 1. system.process.cpu.total.percent --> What percent of CPU is being consumed.
