@@ -8,4 +8,5 @@
 ....[5.1][Load data from Mysql with Logstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_Mysql_load.md) <br>
 ....[5.2][Load data from AWS S3 bucket with Logstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_S3_load.md) <br>
 ....[5.3][Load CSV data to Elasticsearch with Logstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_CSV_Load.md)<br>
-....[5.4][Load data from Kafka Topic with Logsstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_load_Kafka.md)
+....[5.4][Load data from Kafka Topic with Logsstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_load_Kafka.md) <br>
+[6]. [Kibana](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Using_Kibana.md)
