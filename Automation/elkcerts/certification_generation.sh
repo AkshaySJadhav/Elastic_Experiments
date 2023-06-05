@@ -24,4 +24,4 @@ openssl x509 -req -passin pass:"$1" -in kib01.csr -CA rootCA.pem -CAkey rootCA.k
 
 cd ../elk
 
-VERSION="7.8.0" HOSTCERTSDIR="$PWD/../elkcerts" ESCERTSDIR="/usr/share/elasticsearch/config" KIBCERTSDIR="/usr/share/kibana/config" docker-compose up -d
+VERSION="8.8.0" HOSTCERTSDIR="$PWD/../elkcerts" ESCERTSDIR="/usr/share/elasticsearch/config" KIBCERTSDIR="/usr/share/kibana/config" docker-compose up -d
