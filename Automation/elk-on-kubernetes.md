@@ -1,12 +1,16 @@
-# elasticsearch.yaml
+## Deploying ELK on Kubernets
 
+
+#### Here is the elasticsearch.yml that contains the kibana + ELK.
+
+```
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: elasticsearch
 spec:
   serviceName: elasticsearch
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: elasticsearch
@@ -55,3 +59,43 @@ spec:
           value: "http://elasticsearch:9200"
         ports:
         - containerPort: 5601
+```
+
+#### Exposing the ports as nodeports.
+
+elasticsearch-nodeport.yml
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: elasticsearch-service
+spec:
+  selector:
+    app: elasticsearch
+  ports:
+    - protocol: TCP
+      port: 9200
+      targetPort: 9200
+  type: NodePort
+```
+
+kibana-nodeport.yml
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana-service
+spec:
+  selector:
+    app: kibana
+  ports:
+    - protocol: TCP
+      port: 5601
+      targetPort: 5601
+  type: NodePort
+```
+
+
+
+
+        
