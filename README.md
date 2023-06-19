@@ -9,5 +9,6 @@
 ....[5.2][Load data from AWS S3 bucket with Logstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_S3_load.md) <br>
 ....[5.3][Load CSV data to Elasticsearch with Logstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_CSV_Load.md)<br>
 ....[5.4][Load data from Kafka Topic with Logsstash.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Logstash_load_Kafka.md) <br>
+....[5.5][Implement Logstash between Elasticsearch and Filebeat](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Loadingdata_filebat_logstash_elasticsearch.md)
 [6]. [Installation Kibana.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Using_Kibana.md)<br>
 [7]. [Kibana Lens: Metricbeat.](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/Kibana_lenses.md)
