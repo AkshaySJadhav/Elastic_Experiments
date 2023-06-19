@@ -83,3 +83,5 @@ To efficiently discover logs related to systemd in Kibana, follow these steps:
 
 By following these steps, you can effectively explore systemd related dmessage.
 
+
+![Alt text](https://github.com/AkshaySJadhav/Elastic_Experiments/blob/main/resources/kibana.png)
