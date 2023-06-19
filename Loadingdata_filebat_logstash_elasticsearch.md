@@ -32,15 +32,16 @@ input {
 }
 
 filter {
+  # For example, to extract systemd-related logs, use the provided Grok pattern
   grok {
-    match => { "message" => "\[%{SPACE}%{NUMBER:timestamp}\] %{WORD:service}\[%{NUMBER:pid}\]: %{GREEDYDATA:message}" }
-}
+    match => { "message" => "\[%{NUMBER:timestamp}\] %{WORD:system}[^\]]+: %{WORD:action} %{GREEDYDATA:message}" }
+  }
 }
 
 output {
   elasticsearch {
     hosts => ["localhost:9200"]
-    index => "logstash-beat-pipeline"
+    index => "logstash-%{+YYYY.MM.dd}"
   }
 }
 ```
@@ -52,16 +53,16 @@ root@osboxes:/usr/share/filebeat/bin# ./filebeat -e -c /etc/filebeat/filebeat.ym
 
 {"log.level":"info","@timestamp":"2023-06-07T05:56:37.826-0400","log.origin":{"file.name":"instance/beat.go","file.line":724},"message":"Home path: [/usr/share/filebeat/bin] Config path: [/usr/share/filebeat/bin]
 Data path: [/usr/share/filebeat/bin/data] Logs path: [/usr/share/filebeat/bin/logs]","service.name":"filebeat","ecs.version":"1.6.0"}
-```
 
-```
 root@osboxes:~# /usr/share/logstash/bin/logstash -f /etc/logstash/logstash-beat-dmesg.yml
 Using bundled JDK: /usr/share/logstash/jdk
 ```
 
+Check if the Logstash-<Date> index has been craeted:-
+
 ```
-osboxes@osboxes:~$ curl -XGET 127.0.0.1:9200/_cat/indices?v | grep logstash-beat-pipeline
-yellow open   logstash-beat-pipeline                     CC89E3D7SbKrz1deXF1Irg   1   1        667            0    410.1kb        410.1kb
+osboxes@osboxes:~$ curl -XGET 127.0.0.1:9200/_cat/indices?v | grep Logstash
+yellow open   Logstash-2023-06-07                  CC89E3D7SbKrz1deXF1Irg   1   1        667            0    410.1kb        410.1kb
 osboxes@osboxes:~$
 ```
 
@@ -71,4 +72,6 @@ Manually pushed the data to the dmesg file and could see that is being fetch by 
 root@osboxes:/home/osboxes# echo "[    5.455333] systemd[1]: Starting Load/Save Random Seed...[Akshay]" >> /var/log/dmesg
 root@osboxes:/home/osboxes#
 ```
+
+
 
