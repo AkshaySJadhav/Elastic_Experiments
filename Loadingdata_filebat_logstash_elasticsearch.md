@@ -58,7 +58,7 @@ root@osboxes:~# /usr/share/logstash/bin/logstash -f /etc/logstash/logstash-beat-
 Using bundled JDK: /usr/share/logstash/jdk
 ```
 
-Check if the Logstash-<Date> index has been craeted:-
+Check if the Logstash-DATE index has been created with following command:-
 
 ```
 osboxes@osboxes:~$ curl -XGET 127.0.0.1:9200/_cat/indices?v | grep Logstash
@@ -73,5 +73,13 @@ root@osboxes:/home/osboxes# echo "[    5.455333] systemd[1]: Starting Load/Save 
 root@osboxes:/home/osboxes#
 ```
 
+To efficiently discover logs related to systemd in Kibana, follow these steps:
 
+1. Login to Kibana.
+2. Navigate to the Kibana UI.
+3. Go to the "Discover" section.
+4. Select the appropriate index, in this case, the "logstash" index where the logs are stored.
+5. Once the index is selected, you will see a list of log entries in the Discover view.
+
+By following these steps, you can effectively explore systemd related dmessage.
 
